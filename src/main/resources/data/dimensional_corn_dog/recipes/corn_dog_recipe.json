@@ -1,0 +1,24 @@
+{
+  "group": "dimensional_corn_dog",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "  2",
+    " 4 ",
+    "6  "
+  ],
+  "key": {
+    "2": {
+      "item": "minecraft:bread"
+    },
+    "4": {
+      "item": "dimensional_corn_dog:trotter"
+    },
+    "6": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "dimensional_corn_dog:corn_dog",
+    "count": 1
+  }
+}

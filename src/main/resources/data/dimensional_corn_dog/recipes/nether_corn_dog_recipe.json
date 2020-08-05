@@ -1,0 +1,19 @@
+{
+  "group": "dimensional_corn_dog",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "dimensional_corn_dog:corn_dog"
+    },
+    {
+      "item": "minecraft:obsidian"
+    },
+    {
+      "item": "minecraft:gold_nugget"
+    }
+  ],
+  "result": {
+    "item": "dimensional_corn_dog:nether_corn_dog",
+    "count": 1
+  }
+}

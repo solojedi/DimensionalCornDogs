@@ -1,0 +1,16 @@
+{
+  "group": "dimensional_corn_dog",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "dimensional_corn_dog:corn_dog"
+    },
+    {
+      "item": "minecraft:ender_eye"
+    }
+  ],
+  "result": {
+    "item": "dimensional_corn_dog:end_corn_dog",
+    "count": 1
+  }
+}
