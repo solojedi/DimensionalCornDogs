@@ -1,0 +1,42 @@
+{
+  "group": "dimensional_corn_dog",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "dimensional_corn_dog:corn_dog"
+    },
+    "1": {
+      "item": "dimensional_corn_dog:corn_dog"
+    },
+    "2": {
+      "item": "dimensional_corn_dog:corn_dog"
+    },
+    "3": {
+      "item": "dimensional_corn_dog:corn_dog"
+    },
+    "4": {
+      "item": "minecraft:red_bed"
+    },
+    "5": {
+      "item": "dimensional_corn_dog:corn_dog"
+    },
+    "6": {
+      "item": "dimensional_corn_dog:corn_dog"
+    },
+    "7": {
+      "item": "dimensional_corn_dog:corn_dog"
+    },
+    "8": {
+      "item": "dimensional_corn_dog:corn_dog"
+    }
+  },
+  "result": {
+    "item": "dimensional_corn_dog:home_dog",
+    "count": 8
+  }
+}

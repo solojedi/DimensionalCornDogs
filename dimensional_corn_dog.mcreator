@@ -231,6 +231,15 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "home_dog"
+    },
+    {
+      "name": "HomeDogRecipe",
+      "type": "recipe",
+      "sortid": 13,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "home_dog_recipe"
     }
   ],
   "variable_elements": [
