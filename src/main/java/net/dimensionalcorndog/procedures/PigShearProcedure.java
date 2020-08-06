@@ -42,27 +42,12 @@ public class PigShearProcedure extends DimensionalCornDogModElements.ModElement 
 			System.err.println("Failed to load dependency sourceentity for procedure PigShear!");
 			return;
 		}
-		if (dependencies.get("x") == null) {
-			System.err.println("Failed to load dependency x for procedure PigShear!");
-			return;
-		}
-		if (dependencies.get("y") == null) {
-			System.err.println("Failed to load dependency y for procedure PigShear!");
-			return;
-		}
-		if (dependencies.get("z") == null) {
-			System.err.println("Failed to load dependency z for procedure PigShear!");
-			return;
-		}
 		if (dependencies.get("world") == null) {
 			System.err.println("Failed to load dependency world for procedure PigShear!");
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");
 		Entity sourceentity = (Entity) dependencies.get("sourceentity");
-		double x = dependencies.get("x") instanceof Integer ? (int) dependencies.get("x") : (double) dependencies.get("x");
-		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
-		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
 		if ((entity instanceof PigEntity)) {
 			if ((((sourceentity instanceof LivingEntity) ? ((LivingEntity) sourceentity).getHeldItemMainhand() : ItemStack.EMPTY)
@@ -72,16 +57,17 @@ public class PigShearProcedure extends DimensionalCornDogModElements.ModElement 
 					_setstack.setCount((int) 4);
 					ItemHandlerHelper.giveItemToPlayer(((PlayerEntity) sourceentity), _setstack);
 				}
-				if (!entity.world.isRemote)
-					entity.remove();
 				if (world instanceof World && !world.getWorld().isRemote) {
 					Entity entityToSpawn = new PigBoneLegsEntity.CustomEntity(PigBoneLegsEntity.entity, world.getWorld());
-					entityToSpawn.setLocationAndAngles(x, y, z, world.getRandom().nextFloat() * 360F, 0);
+					entityToSpawn.setLocationAndAngles((entity.getPosX()), (entity.getPosY()), (entity.getPosZ()), (float) (entity.rotationYaw),
+							(float) (entity.rotationPitch));
 					if (entityToSpawn instanceof MobEntity)
 						((MobEntity) entityToSpawn).onInitialSpawn(world, world.getDifficultyForLocation(new BlockPos(entityToSpawn)),
 								SpawnReason.MOB_SUMMONED, (ILivingEntityData) null, (CompoundNBT) null);
 					world.addEntity(entityToSpawn);
 				}
+				if (!entity.world.isRemote)
+					entity.remove();
 			}
 		}
 	}
