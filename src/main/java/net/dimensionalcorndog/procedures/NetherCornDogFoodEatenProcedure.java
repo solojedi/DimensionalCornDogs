@@ -5,14 +5,12 @@ import net.minecraftforge.fml.common.ObfuscationReflectionHelper;
 import net.minecraft.world.server.ServerWorld;
 import net.minecraft.world.dimension.DimensionType;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.potion.Effects;
 import net.minecraft.potion.EffectInstance;
 import net.minecraft.network.play.server.SPlayerAbilitiesPacket;
 import net.minecraft.network.play.server.SPlaySoundEventPacket;
 import net.minecraft.network.play.server.SPlayEntityEffectPacket;
 import net.minecraft.network.play.server.SChangeGameStatePacket;
 import net.minecraft.entity.player.ServerPlayerEntity;
-import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.Entity;
 
 import net.dimensionalcorndog.DimensionalCornDogModVariables;
@@ -73,8 +71,6 @@ public class NetherCornDogFoodEatenProcedure extends DimensionalCornDogModElemen
 					capability.syncPlayerVariables(entity);
 				});
 			}
-			if (entity instanceof LivingEntity)
-				((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.NAUSEA, (int) 60, (int) 1));
 		}
 	}
 }
