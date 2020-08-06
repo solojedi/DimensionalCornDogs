@@ -104,10 +104,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       }
@@ -167,10 +163,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       }
@@ -209,6 +201,12 @@
       "type": "logic",
       "scope": "map",
       "value": "false"
+    },
+    {
+      "name": "PlayerTeleported",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
     }
   ],
   "sound_elements": [],
@@ -225,9 +223,10 @@
   "workspaceSettings": {
     "modid": "dimensional_corn_dog",
     "modName": "Dimensional Corn Dog",
-    "version": "1.0.0",
-    "author": "jerry, MCreator",
-    "websiteURL": "https://mcreator.net",
+    "version": "1.0.1",
+    "description": "Dimensional Teleportation Corn Dogs",
+    "author": "CoffeHacker, MCreator",
+    "websiteURL": "https://github.com/solojedi/DimensionalCornDogs/issues",
     "disableForgeVersionCheck": true,
     "serverSideOnly": false,
     "requiredMods": [],
@@ -235,6 +234,7 @@
     "dependants": [],
     "mcreatorDependencies": [],
     "currentGenerator": "forge-1.15.2",
+    "credits": "Created using mod maker MCreator - https://mcreator.net/about",
     "modElementsPackage": "net.dimensionalcorndog",
     "lockBaseModFiles": false
   },

@@ -61,7 +61,6 @@ public class NetherCornDogItem extends DimensionalCornDogModElements.ModElement 
 			{
 				Map<String, Object> $_dependencies = new HashMap<>();
 				$_dependencies.put("entity", entity);
-				$_dependencies.put("world", world);
 				NetherCornDogFoodEatenProcedure.executeProcedure($_dependencies);
 			}
 			return retval;

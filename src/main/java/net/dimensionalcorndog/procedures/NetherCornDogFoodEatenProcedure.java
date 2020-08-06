@@ -4,7 +4,6 @@ import net.minecraftforge.fml.common.ObfuscationReflectionHelper;
 
 import net.minecraft.world.server.ServerWorld;
 import net.minecraft.world.dimension.DimensionType;
-import net.minecraft.world.IWorld;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.potion.Effects;
 import net.minecraft.potion.EffectInstance;
@@ -32,12 +31,7 @@ public class NetherCornDogFoodEatenProcedure extends DimensionalCornDogModElemen
 			System.err.println("Failed to load dependency entity for procedure NetherCornDogFoodEaten!");
 			return;
 		}
-		if (dependencies.get("world") == null) {
-			System.err.println("Failed to load dependency world for procedure NetherCornDogFoodEaten!");
-			return;
-		}
 		Entity entity = (Entity) dependencies.get("entity");
-		IWorld world = (IWorld) dependencies.get("world");
 		if (((entity.dimension.getId()) == (-1))) {
 			{
 				Entity _ent = entity;
@@ -72,8 +66,13 @@ public class NetherCornDogFoodEatenProcedure extends DimensionalCornDogModElemen
 					((ServerPlayerEntity) _ent).connection.sendPacket(new SPlaySoundEventPacket(1032, BlockPos.ZERO, 0, false));
 				}
 			}
-			DimensionalCornDogModVariables.MapVariables.get(world).JustTeleported = (boolean) (true);
-			DimensionalCornDogModVariables.MapVariables.get(world).syncData(world);
+			{
+				boolean _setval = (boolean) (true);
+				entity.getCapability(DimensionalCornDogModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.PlayerTeleported = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
 			if (entity instanceof LivingEntity)
 				((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.NAUSEA, (int) 60, (int) 1));
 		}

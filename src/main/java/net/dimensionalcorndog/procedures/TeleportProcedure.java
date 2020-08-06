@@ -55,7 +55,8 @@ public class TeleportProcedure extends DimensionalCornDogModElements.ModElement 
 		double y = dependencies.get("y") instanceof Integer ? (int) dependencies.get("y") : (double) dependencies.get("y");
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
-		if (((DimensionalCornDogModVariables.MapVariables.get(world).JustTeleported) == (true))) {
+		if ((((entity.getCapability(DimensionalCornDogModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+				.orElse(new DimensionalCornDogModVariables.PlayerVariables())).PlayerTeleported) == (true))) {
 			if (((entity.dimension.getId()) == (1))) {
 				{
 					Entity _ent = entity;
@@ -79,8 +80,13 @@ public class TeleportProcedure extends DimensionalCornDogModElements.ModElement 
 							"fill ~-2 ~ ~-2 ~2 ~1 ~2 air");
 				}
 			}
-			DimensionalCornDogModVariables.MapVariables.get(world).JustTeleported = (boolean) (false);
-			DimensionalCornDogModVariables.MapVariables.get(world).syncData(world);
+			{
+				boolean _setval = (boolean) (false);
+				entity.getCapability(DimensionalCornDogModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.PlayerTeleported = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
 		}
 	}
 
