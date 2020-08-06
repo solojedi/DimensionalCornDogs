@@ -10,7 +10,10 @@ import net.minecraft.world.IWorld;
 import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.util.math.Vec2f;
+import net.minecraft.potion.Effects;
+import net.minecraft.potion.EffectInstance;
 import net.minecraft.entity.player.ServerPlayerEntity;
+import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.Entity;
 import net.minecraft.command.ICommandSource;
 import net.minecraft.command.CommandSource;
@@ -60,12 +63,14 @@ public class TeleportProcedure extends DimensionalCornDogModElements.ModElement 
 			if (((entity.dimension.getId()) == (1))) {
 				{
 					Entity _ent = entity;
-					_ent.setPositionAndUpdate(30, 65, 0);
+					_ent.setPositionAndUpdate(30, 80, 0);
 					if (_ent instanceof ServerPlayerEntity) {
-						((ServerPlayerEntity) _ent).connection.setPlayerLocation(30, 65, 0, _ent.rotationYaw, _ent.rotationPitch,
+						((ServerPlayerEntity) _ent).connection.setPlayerLocation(30, 80, 0, _ent.rotationYaw, _ent.rotationPitch,
 								Collections.emptySet());
 					}
 				}
+				if (entity instanceof LivingEntity)
+					((LivingEntity) entity).addPotionEffect(new EffectInstance(Effects.SLOW_FALLING, (int) 120, (int) 1));
 			} else if (((entity.dimension.getId()) == (-1))) {
 				if (!world.getWorld().isRemote && world.getWorld().getServer() != null) {
 					world.getWorld().getServer().getCommandManager().handleCommand(

@@ -197,13 +197,13 @@
   ],
   "variable_elements": [
     {
-      "name": "JustTeleported",
+      "name": "PlayerTeleported",
       "type": "logic",
-      "scope": "map",
+      "scope": "player_persistent",
       "value": "false"
     },
     {
-      "name": "PlayerTeleported",
+      "name": "PlayerEndSwap",
       "type": "logic",
       "scope": "player_persistent",
       "value": "false"
