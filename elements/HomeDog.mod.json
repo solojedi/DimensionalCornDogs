@@ -1,0 +1,29 @@
+{
+  "_fv": 10,
+  "_type": "food",
+  "definition": {
+    "renderType": 0,
+    "texture": "corndoghomemodel1-texture",
+    "customModelName": "Normal",
+    "name": "Home Dog",
+    "specialInfo": [
+      "Eat to set location as Home.",
+      "Eat again to teleport to home.",
+      "To forget and reset, eat a Raw Corn Dog."
+    ],
+    "creativeTab": {
+      "value": "FOOD"
+    },
+    "stackSize": 64,
+    "nutritionalValue": 1,
+    "saturation": 0.3,
+    "eatingSpeed": 32,
+    "forDogs": false,
+    "isAlwaysEdible": true,
+    "animation": "eat",
+    "hasGlow": false,
+    "onEaten": {
+      "name": "HomeDogFoodEaten"
+    }
+  }
+}

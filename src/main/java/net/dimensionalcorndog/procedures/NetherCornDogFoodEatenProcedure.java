@@ -64,13 +64,13 @@ public class NetherCornDogFoodEatenProcedure extends DimensionalCornDogModElemen
 					((ServerPlayerEntity) _ent).connection.sendPacket(new SPlaySoundEventPacket(1032, BlockPos.ZERO, 0, false));
 				}
 			}
-			{
-				boolean _setval = (boolean) (true);
-				entity.getCapability(DimensionalCornDogModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.PlayerTeleported = _setval;
-					capability.syncPlayerVariables(entity);
-				});
-			}
+		}
+		{
+			boolean _setval = (boolean) (true);
+			entity.getCapability(DimensionalCornDogModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+				capability.PlayerTeleported = _setval;
+				capability.syncPlayerVariables(entity);
+			});
 		}
 	}
 }

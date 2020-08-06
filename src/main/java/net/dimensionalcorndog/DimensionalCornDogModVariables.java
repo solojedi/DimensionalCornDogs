@@ -69,6 +69,10 @@ public class DimensionalCornDogModVariables {
 			CompoundNBT nbt = new CompoundNBT();
 			nbt.putBoolean("PlayerTeleported", instance.PlayerTeleported);
 			nbt.putBoolean("PlayerEndSwap", instance.PlayerEndSwap);
+			nbt.putDouble("PlayerHomeX", instance.PlayerHomeX);
+			nbt.putDouble("PlayerHomeY", instance.PlayerHomeY);
+			nbt.putDouble("PlayerHomeZ", instance.PlayerHomeZ);
+			nbt.putBoolean("PlayerHasHome", instance.PlayerHasHome);
 			return nbt;
 		}
 
@@ -77,12 +81,20 @@ public class DimensionalCornDogModVariables {
 			CompoundNBT nbt = (CompoundNBT) inbt;
 			instance.PlayerTeleported = nbt.getBoolean("PlayerTeleported");
 			instance.PlayerEndSwap = nbt.getBoolean("PlayerEndSwap");
+			instance.PlayerHomeX = nbt.getDouble("PlayerHomeX");
+			instance.PlayerHomeY = nbt.getDouble("PlayerHomeY");
+			instance.PlayerHomeZ = nbt.getDouble("PlayerHomeZ");
+			instance.PlayerHasHome = nbt.getBoolean("PlayerHasHome");
 		}
 	}
 
 	public static class PlayerVariables {
 		public boolean PlayerTeleported = false;
 		public boolean PlayerEndSwap = false;
+		public double PlayerHomeX = 0;
+		public double PlayerHomeY = 0;
+		public double PlayerHomeZ = 0;
+		public boolean PlayerHasHome = false;
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayerEntity)
 				DimensionalCornDogMod.PACKET_HANDLER.send(PacketDistributor.PLAYER.with(() -> (ServerPlayerEntity) entity),
@@ -119,6 +131,10 @@ public class DimensionalCornDogModVariables {
 					.orElse(new PlayerVariables()));
 			clone.PlayerTeleported = original.PlayerTeleported;
 			clone.PlayerEndSwap = original.PlayerEndSwap;
+			clone.PlayerHomeX = original.PlayerHomeX;
+			clone.PlayerHomeY = original.PlayerHomeY;
+			clone.PlayerHomeZ = original.PlayerHomeZ;
+			clone.PlayerHasHome = original.PlayerHasHome;
 		}
 	}
 	public static class PlayerVariablesSyncMessage {
@@ -144,6 +160,10 @@ public class DimensionalCornDogModVariables {
 							.orElse(new PlayerVariables()));
 					variables.PlayerTeleported = message.data.PlayerTeleported;
 					variables.PlayerEndSwap = message.data.PlayerEndSwap;
+					variables.PlayerHomeX = message.data.PlayerHomeX;
+					variables.PlayerHomeY = message.data.PlayerHomeY;
+					variables.PlayerHomeZ = message.data.PlayerHomeZ;
+					variables.PlayerHasHome = message.data.PlayerHasHome;
 				}
 			});
 			context.setPacketHandled(true);

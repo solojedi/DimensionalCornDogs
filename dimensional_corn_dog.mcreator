@@ -193,6 +193,44 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "end_corn_dog_recipe"
+    },
+    {
+      "name": "HomeDogFoodEaten",
+      "type": "procedure",
+      "sortid": 12,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "home_dog_food_eaten",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          }
+        ]
+      }
+    },
+    {
+      "name": "HomeDog",
+      "type": "food",
+      "sortid": 12,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "home_dog"
     }
   ],
   "variable_elements": [
@@ -207,6 +245,30 @@
       "type": "logic",
       "scope": "player_persistent",
       "value": "false"
+    },
+    {
+      "name": "PlayerHomeX",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "PlayerHomeY",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "PlayerHomeZ",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "PlayerHasHome",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
     }
   ],
   "sound_elements": [],
@@ -217,7 +279,8 @@
       "item.dimensional_corn_dog.nether_corn_dog": "Nether Corn Dog",
       "entity.dimensional_corn_dog.pig_bone_legs": "Amputated Pig",
       "item.dimensional_corn_dog.end_corn_dog": "End Corn Dog",
-      "item.dimensional_corn_dog.pig_bone_legs": "Amputated Pig Spawn Egg"
+      "item.dimensional_corn_dog.pig_bone_legs": "Amputated Pig Spawn Egg",
+      "item.dimensional_corn_dog.home_dog": "Home Dog"
     }
   },
   "workspaceSettings": {

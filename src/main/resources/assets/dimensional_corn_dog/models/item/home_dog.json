@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "dimensional_corn_dog:items/corndoghomemodel1-texture"
+  }
+}

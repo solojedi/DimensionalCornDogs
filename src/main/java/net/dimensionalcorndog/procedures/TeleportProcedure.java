@@ -85,6 +85,31 @@ public class TeleportProcedure extends DimensionalCornDogModElements.ModElement 
 							"fill ~-2 ~ ~-2 ~2 ~1 ~2 air");
 				}
 			}
+			if (((entity.dimension.getId()) == (0))) {
+				if ((((entity.getCapability(DimensionalCornDogModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+						.orElse(new DimensionalCornDogModVariables.PlayerVariables())).PlayerHasHome) == (true))) {
+					{
+						Entity _ent = entity;
+						_ent.setPositionAndUpdate(
+								((entity.getCapability(DimensionalCornDogModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+										.orElse(new DimensionalCornDogModVariables.PlayerVariables())).PlayerHomeX),
+								((entity.getCapability(DimensionalCornDogModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+										.orElse(new DimensionalCornDogModVariables.PlayerVariables())).PlayerHomeY),
+								((entity.getCapability(DimensionalCornDogModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+										.orElse(new DimensionalCornDogModVariables.PlayerVariables())).PlayerHomeZ));
+						if (_ent instanceof ServerPlayerEntity) {
+							((ServerPlayerEntity) _ent).connection.setPlayerLocation(
+									((entity.getCapability(DimensionalCornDogModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+											.orElse(new DimensionalCornDogModVariables.PlayerVariables())).PlayerHomeX),
+									((entity.getCapability(DimensionalCornDogModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+											.orElse(new DimensionalCornDogModVariables.PlayerVariables())).PlayerHomeY),
+									((entity.getCapability(DimensionalCornDogModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+											.orElse(new DimensionalCornDogModVariables.PlayerVariables())).PlayerHomeZ),
+									_ent.rotationYaw, _ent.rotationPitch, Collections.emptySet());
+						}
+					}
+				}
+			}
 			{
 				boolean _setval = (boolean) (false);
 				entity.getCapability(DimensionalCornDogModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
