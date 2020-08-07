@@ -238,12 +238,6 @@
       "value": "false"
     },
     {
-      "name": "PlayerEndSwap",
-      "type": "logic",
-      "scope": "player_persistent",
-      "value": "false"
-    },
-    {
       "name": "PlayerHomeX",
       "type": "number",
       "scope": "player_persistent",
@@ -283,7 +277,7 @@
   "workspaceSettings": {
     "modid": "dimensional_corn_dog",
     "modName": "Dimensional Corn Dog",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "description": "Dimensional Teleportation Corn Dogs",
     "author": "CoffeHacker, MCreator",
     "websiteURL": "https://github.com/solojedi/DimensionalCornDogs/issues",

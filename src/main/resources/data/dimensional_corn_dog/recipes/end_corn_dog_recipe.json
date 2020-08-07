@@ -6,11 +6,32 @@
       "item": "dimensional_corn_dog:corn_dog"
     },
     {
+      "item": "dimensional_corn_dog:corn_dog"
+    },
+    {
+      "item": "dimensional_corn_dog:corn_dog"
+    },
+    {
+      "item": "dimensional_corn_dog:corn_dog"
+    },
+    {
       "item": "minecraft:ender_eye"
+    },
+    {
+      "item": "dimensional_corn_dog:corn_dog"
+    },
+    {
+      "item": "dimensional_corn_dog:corn_dog"
+    },
+    {
+      "item": "dimensional_corn_dog:corn_dog"
+    },
+    {
+      "item": "dimensional_corn_dog:corn_dog"
     }
   ],
   "result": {
     "item": "dimensional_corn_dog:end_corn_dog",
-    "count": 1
+    "count": 8
   }
 }

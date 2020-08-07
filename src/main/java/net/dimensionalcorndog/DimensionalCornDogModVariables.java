@@ -68,7 +68,6 @@ public class DimensionalCornDogModVariables {
 		public INBT writeNBT(Capability<PlayerVariables> capability, PlayerVariables instance, Direction side) {
 			CompoundNBT nbt = new CompoundNBT();
 			nbt.putBoolean("PlayerTeleported", instance.PlayerTeleported);
-			nbt.putBoolean("PlayerEndSwap", instance.PlayerEndSwap);
 			nbt.putDouble("PlayerHomeX", instance.PlayerHomeX);
 			nbt.putDouble("PlayerHomeY", instance.PlayerHomeY);
 			nbt.putDouble("PlayerHomeZ", instance.PlayerHomeZ);
@@ -80,7 +79,6 @@ public class DimensionalCornDogModVariables {
 		public void readNBT(Capability<PlayerVariables> capability, PlayerVariables instance, Direction side, INBT inbt) {
 			CompoundNBT nbt = (CompoundNBT) inbt;
 			instance.PlayerTeleported = nbt.getBoolean("PlayerTeleported");
-			instance.PlayerEndSwap = nbt.getBoolean("PlayerEndSwap");
 			instance.PlayerHomeX = nbt.getDouble("PlayerHomeX");
 			instance.PlayerHomeY = nbt.getDouble("PlayerHomeY");
 			instance.PlayerHomeZ = nbt.getDouble("PlayerHomeZ");
@@ -90,7 +88,6 @@ public class DimensionalCornDogModVariables {
 
 	public static class PlayerVariables {
 		public boolean PlayerTeleported = false;
-		public boolean PlayerEndSwap = false;
 		public double PlayerHomeX = 0;
 		public double PlayerHomeY = 0;
 		public double PlayerHomeZ = 0;
@@ -130,7 +127,6 @@ public class DimensionalCornDogModVariables {
 			PlayerVariables clone = ((PlayerVariables) event.getEntity().getCapability(PLAYER_VARIABLES_CAPABILITY, null)
 					.orElse(new PlayerVariables()));
 			clone.PlayerTeleported = original.PlayerTeleported;
-			clone.PlayerEndSwap = original.PlayerEndSwap;
 			clone.PlayerHomeX = original.PlayerHomeX;
 			clone.PlayerHomeY = original.PlayerHomeY;
 			clone.PlayerHomeZ = original.PlayerHomeZ;
@@ -159,7 +155,6 @@ public class DimensionalCornDogModVariables {
 					PlayerVariables variables = ((PlayerVariables) Minecraft.getInstance().player.getCapability(PLAYER_VARIABLES_CAPABILITY, null)
 							.orElse(new PlayerVariables()));
 					variables.PlayerTeleported = message.data.PlayerTeleported;
-					variables.PlayerEndSwap = message.data.PlayerEndSwap;
 					variables.PlayerHomeX = message.data.PlayerHomeX;
 					variables.PlayerHomeY = message.data.PlayerHomeY;
 					variables.PlayerHomeZ = message.data.PlayerHomeZ;
