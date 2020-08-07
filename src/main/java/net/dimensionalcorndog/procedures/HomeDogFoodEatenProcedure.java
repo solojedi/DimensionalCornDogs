@@ -80,7 +80,9 @@ public class HomeDogFoodEatenProcedure extends DimensionalCornDogModElements.Mod
 					});
 				}
 				if (entity instanceof PlayerEntity && !entity.world.isRemote) {
-					((PlayerEntity) entity).sendStatusMessage(new StringTextComponent("Home Dog Set to this location"), (false));
+					((PlayerEntity) entity).sendStatusMessage(new StringTextComponent(
+							(("Home Dog Set to ") + "" + (Math.round(x)) + "" + (", ") + "" + (Math.round(y)) + "" + (", ") + "" + (Math.round(z)))),
+							(false));
 				}
 			} else {
 				if (entity instanceof PlayerEntity && !entity.world.isRemote) {
