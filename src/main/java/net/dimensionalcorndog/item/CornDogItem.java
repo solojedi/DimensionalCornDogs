@@ -48,7 +48,7 @@ public class CornDogItem extends DimensionalCornDogModElements.ModElement {
 		@Override
 		public void addInformation(ItemStack itemstack, World world, List<ITextComponent> list, ITooltipFlag flag) {
 			super.addInformation(itemstack, world, list, flag);
-			list.add(new StringTextComponent("The carnival worker  looks suspect."));
+			list.add(new StringTextComponent("The carnival worker looks suspect."));
 			list.add(new StringTextComponent("Caution is advised."));
 		}
 

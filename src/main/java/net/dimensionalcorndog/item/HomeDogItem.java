@@ -50,7 +50,7 @@ public class HomeDogItem extends DimensionalCornDogModElements.ModElement {
 			super.addInformation(itemstack, world, list, flag);
 			list.add(new StringTextComponent("Eat to set location as Home."));
 			list.add(new StringTextComponent("Eat again to teleport to home."));
-			list.add(new StringTextComponent("To forget and reset, eat a Raw Corn Dog."));
+			list.add(new StringTextComponent("To forget and reset, eat the basic Corn Dog."));
 		}
 
 		@Override

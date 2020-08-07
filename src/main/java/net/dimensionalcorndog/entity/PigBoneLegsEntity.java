@@ -97,6 +97,7 @@ public class PigBoneLegsEntity extends DimensionalCornDogModElements.ModElement 
 
 		protected void dropSpecialItems(DamageSource source, int looting, boolean recentlyHitIn) {
 			super.dropSpecialItems(source, looting, recentlyHitIn);
+			this.entityDropItem(new ItemStack(Items.BONE, (int) (1)));
 		}
 
 		@Override

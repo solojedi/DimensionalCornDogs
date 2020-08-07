@@ -5,15 +5,12 @@
     "recipeType": "Crafting",
     "xpReward": 0.0,
     "cookingTime": 200,
-    "recipeRetstackSize": 1,
+    "recipeRetstackSize": 4,
     "group": "",
-    "recipeShapeless": true,
+    "recipeShapeless": false,
     "recipeSlots": [
       {
-        "value": ""
-      },
-      {
-        "value": ""
+        "value": "CUSTOM:CornDog"
       },
       {
         "value": ""
@@ -22,19 +19,22 @@
         "value": "CUSTOM:CornDog"
       },
       {
+        "value": "Items.GOLD_NUGGET"
+      },
+      {
         "value": "Blocks.OBSIDIAN"
       },
       {
         "value": "Items.GOLD_NUGGET"
       },
       {
-        "value": ""
+        "value": "CUSTOM:CornDog"
       },
       {
         "value": ""
       },
       {
-        "value": ""
+        "value": "CUSTOM:CornDog"
       }
     ],
     "recipeReturnStack": {

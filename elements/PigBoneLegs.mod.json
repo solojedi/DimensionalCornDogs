@@ -70,7 +70,7 @@
     "immuneToPotions": false,
     "immuneToPlayer": false,
     "mobDrop": {
-      "value": ""
+      "value": "Items.BONE"
     },
     "livingSound": {
       "value": "entity.pig.hurt"

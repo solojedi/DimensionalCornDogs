@@ -53,7 +53,8 @@ public class TrotterItem extends DimensionalCornDogModElements.ModElement {
 		public void addInformation(ItemStack itemstack, World world, List<ITextComponent> list, ITooltipFlag flag) {
 			super.addInformation(itemstack, world, list, flag);
 			list.add(new StringTextComponent("Also known as a Pettitoe."));
-			list.add(new StringTextComponent("A delicacy around the world"));
+			list.add(new StringTextComponent("A delicacy around the world."));
+			list.add(new StringTextComponent("Shear a pig to obtain this delightful morsel."));
 		}
 	}
 }
