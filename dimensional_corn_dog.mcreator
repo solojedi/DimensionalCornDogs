@@ -219,6 +219,10 @@
           {
             "name": "z",
             "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       }
@@ -240,6 +244,149 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "home_dog_recipe"
+    },
+    {
+      "name": "HalfASoggyCornDog",
+      "type": "block",
+      "sortid": 14,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "half_a_soggy_corn_dog"
+    },
+    {
+      "name": "WholeSoggyCornDog",
+      "type": "block",
+      "sortid": 15,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "whole_soggy_corn_dog"
+    },
+    {
+      "name": "WholeSoggyCornDogUpdateTick",
+      "type": "procedure",
+      "sortid": 16,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "whole_soggy_corn_dog_update_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SoggyCornDogBlockAdded",
+      "type": "procedure",
+      "sortid": 17,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "soggy_corn_dog_block_added",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "HalfASoggyCornDogUpdateTick",
+      "type": "procedure",
+      "sortid": 18,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "half_a_soggy_corn_dog_update_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SoggyDogDropChance",
+      "type": "procedure",
+      "sortid": 19,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "soggy_dog_drop_chance",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SoggyCornDogToBasicCornDog",
+      "type": "recipe",
+      "sortid": 20,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "soggy_corn_dog_to_basic_corn_dog"
     }
   ],
   "variable_elements": [
@@ -280,7 +427,9 @@
       "item.dimensional_corn_dog.trotter": "Trotter",
       "item.dimensional_corn_dog.corn_dog": "Corn Dog",
       "item.dimensional_corn_dog.nether_corn_dog": "Nether Corn Dog",
+      "block.dimensional_corn_dog.whole_soggy_corn_dog": "Half A Soggy Corn Dog",
       "entity.dimensional_corn_dog.pig_bone_legs": "Amputated Pig",
+      "block.dimensional_corn_dog.half_a_soggy_corn_dog": "Half A Soggy Corn Dog",
       "item.dimensional_corn_dog.end_corn_dog": "End Corn Dog",
       "item.dimensional_corn_dog.pig_bone_legs": "Amputated Pig Spawn Egg",
       "item.dimensional_corn_dog.home_dog": "Home Dog"
@@ -289,9 +438,9 @@
   "workspaceSettings": {
     "modid": "dimensional_corn_dog",
     "modName": "Dimensional Corn Dog",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "description": "Dimensional Teleportation Corn Dogs",
-    "author": "CoffeHacker, MCreator",
+    "author": "CoffeeHacker, MCreator",
     "websiteURL": "https://github.com/solojedi/DimensionalCornDogs/issues",
     "disableForgeVersionCheck": true,
     "serverSideOnly": false,

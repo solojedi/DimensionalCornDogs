@@ -65,6 +65,7 @@ public class HomeDogItem extends DimensionalCornDogModElements.ModElement {
 				$_dependencies.put("x", x);
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
 				HomeDogFoodEatenProcedure.executeProcedure($_dependencies);
 			}
 			return retval;

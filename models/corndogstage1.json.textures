@@ -1,0 +1,10 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "corndogsoggymodel1-texture"
+      },
+      "name": "default"
+    }
+  }
+}

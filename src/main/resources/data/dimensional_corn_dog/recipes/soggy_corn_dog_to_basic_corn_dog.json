@@ -1,0 +1,12 @@
+{
+  "group": "dimensional_corn_dog",
+  "type": "minecraft:smelting",
+  "experience": 1,
+  "cookingtime": 100,
+  "ingredient": {
+    "item": "dimensional_corn_dog:whole_soggy_corn_dog"
+  },
+  "result": {
+    "item": "dimensional_corn_dog:corn_dog"
+  }
+}

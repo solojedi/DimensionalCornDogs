@@ -1,0 +1,20 @@
+{
+  "_fv": 10,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Smelting",
+    "xpReward": 1.0,
+    "cookingTime": 100,
+    "recipeRetstackSize": 1,
+    "group": "",
+    "recipeShapeless": false,
+    "smeltingInputStack": {
+      "value": "CUSTOM:WholeSoggyCornDog"
+    },
+    "smeltingReturnStack": {
+      "value": "CUSTOM:CornDog"
+    },
+    "name": "soggy_corn_dog_to_basic_corn_dog",
+    "namespace": "mod"
+  }
+}

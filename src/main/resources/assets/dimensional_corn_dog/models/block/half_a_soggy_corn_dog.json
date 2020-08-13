@@ -1,0 +1,8 @@
+{
+  "parent": "dimensional_corn_dog:custom/corndogstage0",
+  "textures": {
+    "all": "dimensional_corn_dog:blocks/corndogsoggymodel2-texture",
+    "particle": "dimensional_corn_dog:blocks/corndogsoggymodel2-texture",
+    "0": "dimensional_corn_dog:blocks/corndogsoggymodel2-texture"
+  }
+}
